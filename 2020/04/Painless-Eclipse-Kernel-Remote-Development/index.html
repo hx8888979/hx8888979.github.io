@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Painless Eclipse Kernel Remote Development, HX8888979&#39;s blog">
-    <meta name="description" content="this document shows how to remotely develop kernel (Makefile Project) through Eclipse with detail configuration and a ex">
+    <meta name="description" content="This document shows how to remotely develop kernel (Makefile Project) through Eclipse with detail configuration and an e">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -351,10 +351,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><em>this document shows how to remotely develop kernel (Makefile Project) through Eclipse with detail configuration and a example of Weenix</em> </p>
+                <p><em>This document shows how to remotely develop kernel (Makefile Project) through Eclipse with detail configuration and an example of Weenix</em> </p>
 <h2 id="1-Why-Painless"><a href="#1-Why-Painless" class="headerlink" title="1. Why Painless"></a>1. Why Painless</h2><p><em>Are you suffering from following?</em></p>
 <ul>
-<li>Lag in virtual machine, slow GUI</li>
+<li>Lag in the virtual machine, slow GUI</li>
 <li>Blur, Resolution adaptation</li>
 <li>Lots of windows while debugging</li>
 <li>Frequent switching between host and client system</li>
@@ -366,23 +366,23 @@
 <h2 id="2-Basic-Idea"><a href="#2-Basic-Idea" class="headerlink" title="2. Basic Idea"></a>2. Basic Idea</h2><p>use the latest IDE to code while building or debugging remotely in virtual machine or host</p>
 <h2 id="3-Prerequisite"><a href="#3-Prerequisite" class="headerlink" title="3. Prerequisite"></a>3. Prerequisite</h2><ul>
 <li>The latest version of Eclipse IDE for C/C++ Developers (<strong><em>2020-03 R</em></strong> currently)</li>
-<li>Kernel development system with configured SSH server (for weenix, <strong><em>Ubuntu 16.04 32bit</em></strong>) <strong>!!!</strong> Don’t forget enable X11 forwarding</li>
-<li>Stable Internet connection between host system and you (for virtual machine, <strong><em>Host-only</em></strong> will make sure it)</li>
+<li>Kernel development system with configured SSH server (for Weenix, <strong><em>Ubuntu 16.04 32bit</em></strong>) <strong>!!!</strong> Don’t forget enable X11 forwarding</li>
+<li>Stable Internet connection between the host system and you (for the virtual machine, <strong><em>Host-only</em></strong> will make sure it)</li>
 <li>plink (a command-line interface to the PuTTY back ends, you can find it in <strong>PuTTY</strong> package)</li>
 <li>X11 Server (For windows, <strong><em>Xming</em></strong> works well for me)</li>
 </ul>
-<h2 id="4-IDE-Setup"><a href="#4-IDE-Setup" class="headerlink" title="4. IDE Setup"></a>4. IDE Setup</h2><p>For automatically sync all files between remote folder and yours, you should setup a <strong>Synchronized Project</strong> in your Eclipse.</p>
-<p>Wait! Before create new project, two things you need to do.</p>
+<h2 id="4-IDE-Setup"><a href="#4-IDE-Setup" class="headerlink" title="4. IDE Setup"></a>4. IDE Setup</h2><p>To automatically sync all files between the remote folder and yours, you should set up a <strong>Synchronized Project</strong> in your Eclipse.</p>
+<p>Wait! Before creating a new project, two things you need to do.</p>
 <ol>
 <li>Install <strong>Parallel Tools Platform</strong> for your Eclipse to get project template of <strong>Synchronized Project</strong><ul>
 <li>In Eclipse, <em>Help - Install New Software…</em> to open Install Window</li>
-<li>In *”Work With”<em>, choose corresponding version release url (*</em>“2020-03 - <a href="http://download.eclipse.org/releases/2020-03&quot;" target="_blank" rel="noopener">http://download.eclipse.org/releases/2020-03&quot;</a>**)</li>
-<li>Waiting download information</li>
-<li>In following multiple choice box, expand <strong>“General Prupose Tools”</strong> and check Parallel Tools Platform (may change in the future, Please refer your eclipse documentation about “Eclipse PTP” )</li>
+<li>In *”Work With”<em>, choose corresponding version release URL (*</em>“2020-03 - <a href="http://download.eclipse.org/releases/2020-03&quot;" target="_blank" rel="noopener">http://download.eclipse.org/releases/2020-03&quot;</a>**)</li>
+<li>Waiting for download information</li>
+<li>In following multiple-choice box, expand <strong>“General Prupose Tools”</strong> and check Parallel Tools Platform (may change in the future, Please refer your eclipse documentation about “Eclipse PTP” )</li>
 </ul>
 </li>
 <li>Get your kernel project in your remote system<ul>
-<li>Any way you want. Git, SVN, Copy and Paste and etc. </li>
+<li>Any way you want. Git, SVN, Copy and Paste, etc. </li>
 </ul>
 </li>
 <li>Configure SSH<ul>
@@ -395,30 +395,30 @@
 </li>
 </ol>
 <p>Now, it’s time to create your Synchronized Project.</p>
-<p>In Eclipse, find *”Project Explore”* and switch to it. Right Click in blank area, Choose *”New - Synchronized C/C++ Project”*<br><img src="newproject.png" alt="new project"><br>Enter your project name any you want.<br>In Remote directory, select *”connection name”* with the SSH connection name you just create. Then Click *”Browse*” followed. Now you will see your remote folder in pop window, select your project folder.<br>In Project Type, Choose *”Makefile project”<em>, and <strong>Only</strong> select *”Linux GCC”</em> in *”remote Toolchain”<em>.<br><img src="newprojectconfiguration.png" alt="new project configuration"><br>Last, Click Finish to create the project<br>After shortly Sync, you should see all your project file in *”project explore”</em></p>
+<p>In Eclipse, find *”Project Explore”* and switch to it. Right Click in blank area, Choose *”New - Synchronized C/C++ Project”*<br><img src="newproject.png" alt="new project"><br>Enter your project name any you want.<br>In Remote directory, select *”connection name”* with the SSH connection name you just create. Then Click *”Browse*” followed. Now you will see your remote folder in the pop window, select your project folder.<br>In Project Type, Choose *”Makefile project”<em>, and <strong>Only</strong> select *”Linux GCC”</em> in *”remote Toolchain”<em>.<br><img src="newprojectconfiguration.png" alt="new project configuration"><br>Last, Click Finish to create the project<br>After shortly Sync, you should see all your project file in *”project explore”</em></p>
 <p>Up to now, all things look well, you could build your project through simply click <strong><em>build</em></strong> button</p>
-<h2 id="5-Remotely-Launch-and-Debug"><a href="#5-Remotely-Launch-and-Debug" class="headerlink" title="5. Remotely Launch and Debug"></a>5. Remotely Launch and Debug</h2><p>First, we will use plink to connect to our remote system and excute <strong><em>qemu</em></strong> to load our kernel and wait it launch successfully.</p>
+<h2 id="5-Remotely-Launch-and-Debug"><a href="#5-Remotely-Launch-and-Debug" class="headerlink" title="5. Remotely Launch and Debug"></a>5. Remotely Launch and Debug</h2><p>First, we will use plink to connect to our remote system and execute <strong><em>qemu</em></strong> to load our kernel and wait for it launches successfully.</p>
 <ol>
 <li><p>Launch</p>
-<p> In Eclipse, find *”Debug Configurations”* and double click *”C/C++ Application”* to create new configuration, which I set name “Weenix Startup”  </p>
-<p> In Main tab, choose the right project and browse right path of plink for C/C++ Application<br> Switch to Arguments tab, paste following code (of course, you can write one for yourself, it just like shell)</p>
+<p> In Eclipse, find *”Debug Configurations”* and double click *”C/C++ Application”* to create a new configuration, which I set name “Weenix Startup”  </p>
+<p> In the Main tab, choose the right project and browse the right path of plink for C/C++ Application<br> Switch to Arguments tab, paste following code (of course, you can write one for yourself, it just like a shell)</p>
 <p> <em>For Weenix only: this part of codes just like what did in <strong><em>weenix</em></strong> script</em></p>
 <pre><code> {username}@{remote IP} -X -pw {PASSWORD} &quot;cd {remote project path}; qemu-system-i386 -k en-us -boot order=dca -m 256 -cdrom kernel/weenix.iso -drive format=raw,file=user/disk0.img -serial stdio -s -S &amp; while !(netstat -ntlp 2&gt;/dev/null | grep :1234); do echo &#39;waiting qemu gdbserver&#39;; sleep 1; done; echo &#39;gdbserver ready&#39;&quot;</code></pre><p> Replace {username}, {remote IP}, {PASSWORD} and {remote project path} correctly.<br> If you need any extra argument for qemu you can modify<br> <strong>*”qemu-system-i386 -k en-us -boot order=dca -m 256 -cdrom kernel/weenix.iso -drive format=raw,file=user/disk0.img -serial stdio -s -S”*</strong> correspondingly<br> <img src="startup.png" alt="start up"></p>
-<p> Plink will forward qemu window to you! So you even can use *”headless start”* to start your VM to save more system resource or Even <strong><em>ubuntu server</em></strong>!<br> <img src="headless.png" alt="headless"><br> For more detail, Please refer documentation of <strong><em>Plink</em></strong></p>
+<p> Plink will forward the qemu window to you! So you even can use *”headless start”* to start your VM to save more system resources or Even <strong><em>ubuntu server</em></strong>!<br> <img src="headless.png" alt="headless"><br> For more detail, Please refer the documentation of <strong><em>Plink</em></strong></p>
 </li>
 <li><p>Debug</p>
-<p> Still in Debug Configurations, double click *”C/C++ Remote Application”* to create new configuration, which I set name “Weenix Debugger”  </p>
-<p> In Main tab, choose the right project and write *”kernel/weenix.dbg”* for C/C++ Application, or you can “Search Project” if you build project and sync before<br> In Debugger tab, Stop at “kmain” (of course, you can write others you want) and make sure GDB command file is default value “.initgdb” if you want to use weenix kernel debug commands (we enable it later)<br> Switch to Source tab, Click “Add” and choose “Path Mapping”. Give any mapping name you want and write your remote project folder and local project folder correctly. it will make sure GDB can find symbol file while debugging.</p>
+<p> Still in Debug Configurations, double click *”C/C++ Remote Application”* to create a new configuration, which I set name “Weenix Debugger”  </p>
+<p> In the Main tab, choose the right project and write *”kernel/weenix.dbg”* for C/C++ Application, or you can “Search Project” if you build project and sync before<br> In Debugger tab, Stop at “kmain” (of course, you can write others you want) and make sure GDB command file is default value “.initgdb” if you want to use weenix kernel debug commands (we enable it later)<br> Switch to Source tab, click “Add” and choose “Path Mapping”. Give any mapping name you want and write your remote project folder and local project folder correctly. it will make sure GDB can find symbol files while debugging.</p>
 </li>
 <li><p>Combination</p>
-<p> Now, we just need combine them. Still in Debug Configurations, double click *”Launch Group”* to create new configuration, which I set name “Weenix”</p>
+<p> Now, we just need to combine them. Still in Debug Configurations, double click *”Launch Group”* to create a new configuration, which I set name “Weenix”</p>
 <p> Click “Add” to add our <strong><em>Weenix Startup</em></strong> and <strong><em>Weenix Debugger</em></strong>. Make sure Launch mode is Run when you add Weenix Startup. <strong><em>Post launch action</em></strong> is <strong><em>Wait for console output (regexp)</em></strong> and <strong><em>Regular Expression</em></strong> is <strong>*”gdbserver ready”*</strong> (if you use my code in <strong>step 5.1</strong>)<br> <img src="weenixstartup.png" alt="weenix startup"><br> <img src="combination.png" alt="combination"><br> All Set! just modify default debug configuration is <strong><em>Weenix</em></strong><br> <img src="combinationall.png" alt="combination all"></p>
 <p> Try it, all thing will work automatically (<strong><em>Don’t forget to start your X11 server!</em></strong>)</p>
 </li>
 </ol>
-<h2 id="6-Weenix-Only-Where-is-my-weenix-kernel-debug-commands"><a href="#6-Weenix-Only-Where-is-my-weenix-kernel-debug-commands" class="headerlink" title="6. (Weenix Only) Where is my weenix kernel debug commands?"></a>6. (Weenix Only) Where is my weenix kernel debug commands?</h2><p>What? Why can’t I use kernel in debugger console?</p>
-<p>Cause we didn’t source commands file when gdb start.</p>
-<p>Now, we create a .initgdb (keep same name in <strong>step 5.2</strong>) in the local project folder<br>paste following code</p>
+<h2 id="6-Weenix-Only-Where-is-my-weenix-kernel-debug-commands"><a href="#6-Weenix-Only-Where-is-my-weenix-kernel-debug-commands" class="headerlink" title="6. (Weenix Only) Where is my weenix kernel-debug commands?"></a>6. (Weenix Only) Where is my weenix kernel-debug commands?</h2><p>What? Why can’t I use the “kernel” in debugger console?</p>
+<p>Cause we didn’t source commands file when gdb starts.</p>
+<p>Now, we create a .initgdb (keep the same name in <strong>step 5.2</strong>) in the local project folder<br>paste following code</p>
 <pre><code>python sys.path.append(&quot;./python&quot;)
 b kmain
 comm
@@ -433,10 +433,10 @@ source kernel/util/debug.py
 source kernel/util/list.py
 source kernel/vm/vmmap.gdb
 echo kernel help function loaded, type &quot;help kernel&quot; to show more detail
-end</code></pre><p>it will break kernel in kmain and load all commands file, if all things right you will see “kernel help function loaded, type “help kernel” to show more detail” in your gdb console<br><img src="gdbcommands.png" alt="gdb commands"></p>
+end</code></pre><p>it will break kernel in kmain and load all commands file if all things right you will see “kernel help function loaded, type “help kernel” to show more detail” in your gdb console<br><img src="gdbcommands.png" alt="gdb commands"></p>
 <h2 id="7-More"><a href="#7-More" class="headerlink" title="7. More"></a>7. More</h2><ul>
-<li>The tty output from qemu will be put in console. Cause there may be muliple console windows, you may need to switch to right one.</li>
-<li><strong>colored output</strong>, if you want, <strong>*”ANSI Escape in Console”*</strong> is good for that in plugin market. No config needed!</li>
+<li>The TTY output from qemu will be put in the console. Cause there may be multiple console windows, you may need to switch to the right one.</li>
+<li><strong>colored output</strong>, if you want, <strong>*”ANSI Escape in Console”*</strong> is good for that in the plugin market. No config needed!</li>
 </ul>
 
             </div>
@@ -560,7 +560,7 @@ end</code></pre><p>it will break kernel in kmain and load all commands file, if 
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            this document shows how to remotely develop kernel (Makefile Project) through Eclipse with detail configuration and a ex
+                            This document shows how to remotely develop kernel (Makefile Project) through Eclipse with detail configuration and an e
                         
                     </div>
                     <div class="publish-info">
@@ -606,7 +606,7 @@ end</code></pre><p>it will break kernel in kmain and load all commands file, if 
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            this document shows how to remotely develop kernel (Makefile Project) through Eclipse with detail configuration and a ex
+                            This document shows how to remotely develop kernel (Makefile Project) through Eclipse with detail configuration and an e
                         
                     </div>
                     <div class="publish-info">
