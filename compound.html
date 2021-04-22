@@ -14,6 +14,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B7C8361DYT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B7C8361DYT');
+    </script>
+    <script data-ad-client="ca-pub-9069268541631874" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <title>Compound Calculator</title>
 </head>
 
@@ -24,7 +35,18 @@
                 <div class="d-flex align-items-center"><span class="material-icons fs-1">developer_board</span>Compound
                     Calculator</div>
             </span>
-            <span class="text-light fst-italic">ver 1.0</span>
+            <div>
+                <a href="https://github.com/hx8888979/hx8888979.github.io/blob/master/compound.html"
+                    style="fill: white;">
+                    <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16"
+                        version="1.1" width="32" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                        </path>
+                    </svg>
+                </a>
+
+            </div>
         </div>
     </nav>
     <div class="container my-3 p-3 border-top border-bottom">
@@ -43,7 +65,8 @@
                 <div class="mb-3">
                     <label for="apy" class="form-label">APY</label>
                     <div class="input-group">
-                        <input type="number" class="form-control" id="apy" name="apy" value="500.00" min="0.01" step=0.01>
+                        <input type="number" class="form-control" id="apy" name="apy" value="500.00" min="0.01"
+                            step=0.01>
                         <span class="input-group-text">%</span>
                     </div>
                 </div>
@@ -79,7 +102,7 @@
         </div>
     </div>
 
-    <footer class="text-center"><span class="fs-6 fst-italic">author: hx8888979@ 2021</span></footer>
+    <footer class="text-center"><span class="fs-6 fst-italic">author: hx8888979@ 2021 ver 1.0</span></footer>
 
     <script>
         initialize();
