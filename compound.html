@@ -24,7 +24,8 @@
 
         gtag('config', 'G-B7C8361DYT');
     </script>
-    <script data-ad-client="ca-pub-9069268541631874" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-pub-9069268541631874" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <title>Compound Calculator</title>
 </head>
 
@@ -144,7 +145,7 @@
                 radius: 0,
                 borderColor: 'rgb(70, 169, 236)',
                 tension: 0.4,
-                animations: { x: creatAnimation(500 / values.length) }
+                animations: { x: creatAnimation(500 / values.length) },
             }];
             window.calculator.datasets.datasets = datasets;
             calculator.chart.update();
@@ -221,7 +222,19 @@
                         legend: false,
                         tooltip: {
                             mode: 'point',
-                            intersect: true
+                            intersect: true,
+                            displayColors: false,
+                            callbacks: {
+                                title: function (context) {
+                                    return `${context[0]?.label} times per year`;
+                                },
+                                label: function(context) {
+                                    return `will get $${context.parsed.y.toFixed(2)} at next year`;
+                                }
+                            },
+                            filter: function (tooltipItem) {
+                                return tooltipItem.datasetIndex === 0 && tooltipItem.dataIndex === tooltipItem.dataset.data.length - 1;
+                            }
                         },
                         title: {
                             display: true,
@@ -235,6 +248,8 @@
                 document.getElementById('chart'),
                 config
             );
+
+            
 
             window.calculator = {};
             window.calculator.datasets = data;
