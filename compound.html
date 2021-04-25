@@ -13,6 +13,7 @@
     <!-- Meterial Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <script>window.location.href = "https://compound.cf";</script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -33,12 +34,12 @@
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <span class="navbar-brand" href="#">
-                <div class="d-flex align-items-center"><span class="material-icons fs-1 pe-1">developer_board</span>Compound
+                <div class="d-flex align-items-center"><span
+                        class="material-icons fs-1 pe-1">developer_board</span>Compound
                     Calculator</div>
             </span>
             <div>
-                <a href="https://github.com/hx8888979/hx8888979.github.io/blob/master/compound.html"
-                    style="fill: white;">
+                <a href="https://github.com/hx8888979/compoundcalculator" style="fill: white;">
                     <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16"
                         version="1.1" width="32" aria-hidden="true">
                         <path fill-rule="evenodd"
@@ -46,10 +47,15 @@
                         </path>
                     </svg>
                 </a>
-
             </div>
         </div>
     </nav>
+    <div class="container my-3">
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            Hint: Please use new domain <a class="alert-link" href="https://compound.cf">compound.cf</a> to visit for convenience
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
     <div class="container my-3 p-3 border-top border-bottom">
         <div class="row">
             <form class="col-lg-3 shadow-sm p-3 rounded" onsubmit="return onCalculate(event)">
@@ -103,7 +109,11 @@
         </div>
     </div>
 
-    <footer class="text-center"><span class="fs-6 fst-italic">author: hx8888979@ 2021 ver 1.0</span></footer>
+    <footer class="text-center">
+        <div><a class="nav-link active" href="https://github.com/hx8888979/compoundcalculator/issues">Bug/Suggestion/Features? Report here</a>
+            <div class="fs-6 fst-italic">author: hx8888979@ 2021 ver 1.0</div>
+        </div>
+    </footer>
 
     <script>
         initialize();
@@ -228,7 +238,7 @@
                                 title: function (context) {
                                     return `${context[0]?.label} times per year`;
                                 },
-                                label: function(context) {
+                                label: function (context) {
                                     return `will get $${context.parsed.y.toFixed(2)} at next year`;
                                 }
                             },
@@ -249,7 +259,7 @@
                 config
             );
 
-            
+
 
             window.calculator = {};
             window.calculator.datasets = data;
